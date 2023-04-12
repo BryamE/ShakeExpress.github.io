@@ -117,7 +117,7 @@ text-align: center;
 .hero-text h2{
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
 }
 .hero-text p{
@@ -134,7 +134,7 @@ width: 250px;
 height: 250px;
 margin: 0 auto;
 filter: drop-shadow(1px 1px 3px var(--beige)) brightness(.9);
-animation: rotar 20s linear infinite, aparecer 3s linear;
+animation: rotar 25s linear infinite, aparecer 3s linear;
 }
 
 .hero-img img{
@@ -163,6 +163,13 @@ animation: rotar 20s linear infinite, aparecer 3s linear;
         display: grid;
         grid-template-columns: 1fr 1fr;
         place-items: center;
+    }
+
+    .hero-text h2{
+     
+     
+        font-size: 8rem;
+        margin: 0;
     }
 
     .hero-text{
@@ -244,7 +251,7 @@ video{
 /*MENU*/
 .container-menu{
 
-    max-width: 1600px;
+    max-width: 1800px;
     width: 100%;
 
   
@@ -269,7 +276,7 @@ video{
 /*NOSOTROS*/
 
 .nosotros{
-    padding: 9rem 1rem;
+    padding: 9rem 2rem;
 }
 
 .container-nosotros{
@@ -287,15 +294,15 @@ video{
 .nosotros-text h2{
     text-align: center;
     color: var(--negro);
-    font-size: 5rem;
+    font-size: 3rem;
     border-left: 4px solid var(--marronClaro);
-    padding-left: 1rem;
+    padding: 0;
     text-transform: uppercase;
     margin: 0;
 }
 .nosotros-text p{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 .nosotros-img{
@@ -307,6 +314,19 @@ video{
 }
 
 @media(min-width:690px){
+
+    .nosotros-text h2{
+    
+        font-size: 5rem;
+        padding: 0 1rem;
+       
+      
+    }
+
+    .nosotros-text p{
+        text-align: center;
+        font-size: 1.4rem;
+    }
     
     .nosotros-img{
         filter: drop-shadow(5px 5px 5px rgba(186,186,186,1));
@@ -326,6 +346,8 @@ video{
 
      .nosotros-text h2{
         text-align: left;
+        font-size: 6rem;
+        padding: 0 1rem;
    
     }
     .nosotros-text p{

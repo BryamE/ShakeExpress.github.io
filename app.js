@@ -34,7 +34,7 @@ function navegacionSmooth(link){
 function blurElementos(){
     const heroText = document.querySelector('.hero-text');
     const heroImg=document.querySelector('.hero-img');
-    aparecerElementos(heroText,1000)
+    aparecerElementos(heroText,2300)
    
 
 }
@@ -60,7 +60,7 @@ function quitarSpin(){
     setTimeout(()=>{
         spin.classList.add('remover')
         body.style.overflowY="scroll"
-    },1000)
+    },2000)
 }
 
 function desplegarNav(){
