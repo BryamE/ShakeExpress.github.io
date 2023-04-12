@@ -40,7 +40,7 @@ body{
 .navegacion a{
 text-decoration: none;
 margin: .2rem 0;
-font-size: 1.1rem;
+font-size: 1.5rem;
 color: var(--blanco);
 transition: color .5s ease-in-out;
 display: block;
@@ -70,12 +70,14 @@ text-align: center;
 .container-logo{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     line-height: .2rem;
+
 }
 
 .container-logo h1{
     color: var(--marronClaro);
+    font-size: 1.4rem;
 }
 .container-logo span{
     color: var(--beige);
@@ -90,7 +92,20 @@ text-align: center;
 }
 
 
+@media(min-width:350px){
 
+    .container-logo{
+     
+        justify-content: space-evenly;
+        line-height: .2rem;
+        width: 300px;
+    }
+    .container-logo h1{
+        color: var(--marronClaro);
+        font-size: 2rem;
+    }
+
+}
 
 /*HERO*/
 .hero{
@@ -130,8 +145,8 @@ text-align: center;
 }
 .hero-img{
 
-width: 250px;
-height: 250px;
+width: 200px;
+height: 200px;
 margin: 0 auto;
 filter: drop-shadow(1px 1px 3px var(--beige)) brightness(.9);
 animation: rotar 25s linear infinite, aparecer 3s linear;
@@ -139,6 +154,15 @@ animation: rotar 25s linear infinite, aparecer 3s linear;
 
 .hero-img img{
     object-fit: cover;
+
+}
+@media(min-width:350px){
+    .hero-img{
+
+        width: 250px;
+        height: 250px;
+      
+        }
 
 }
 
@@ -365,6 +389,9 @@ video{
     color: white;
     text-align: center;
 }
+.footer .container-logo{
+    margin: 0 auto;
+}
 
 .aparecer{
     animation: aparecer 1s linear;
@@ -400,12 +427,24 @@ video{
 .bebidas__title h2{
     margin: 0;
     color:#222;
-    font-size: 8vh;
+    font-size: 6vh;
     text-align: center;
     text-transform: uppercase;
     filter: drop-shadow(5px 5px 5px rgba(240,240,240,1));
    
     
+}
+
+@media(min-width:300px){
+    
+    .bebidas__title h2{
+     
+        font-size: 8vh;
+     
+       
+        
+    }
+
 }
 
 /* estilizando el div line__color */
