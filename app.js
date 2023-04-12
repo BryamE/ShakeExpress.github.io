@@ -7,11 +7,28 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 function iniciarApp(){
-    desplegarNav()
+    desplegarNav();
     quitarSpin();
+    blurElementos();
+    allLinks()
 
-    blurElementos()
+}
 
+function allLinks(){
+    const links = document.querySelectorAll('.smooth');
+    
+    links.forEach((link)=>{
+        navegacionSmooth(link)
+    })
+  
+}
+function navegacionSmooth(link){
+    link.addEventListener('click',(e)=>{
+        e.preventDefault();
+ 
+        const seccion = document.querySelector(e.target.attributes.href.value);
+        seccion.scrollIntoView({behavior: 'smooth'});
+    })
 }
 
 function blurElementos(){

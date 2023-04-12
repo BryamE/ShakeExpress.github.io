@@ -269,7 +269,7 @@ video{
 /*NOSOTROS*/
 
 .nosotros{
-    padding: 3rem 1rem;
+    padding: 9rem 1rem;
 }
 
 .container-nosotros{
@@ -291,6 +291,7 @@ video{
     border-left: 4px solid var(--marronClaro);
     padding-left: 1rem;
     text-transform: uppercase;
+    margin: 0;
 }
 .nosotros-text p{
     text-align: center;
@@ -368,3 +369,107 @@ video{
 
 
 /*JOAQUIN*/
+/* SECTION__2 */
+
+/* estilizando el div bebidas__container */
+
+
+
+.bebidas__title h2{
+    margin: 0;
+    color:#222;
+    font-size: 8vh;
+    text-align: center;
+    text-transform: uppercase;
+    filter: drop-shadow(5px 5px 5px rgba(240,240,240,1));
+   
+    
+}
+
+/* estilizando el div line__color */
+
+
+
+/* estilizando el div coffe__container */
+.coffe__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+/* estilizando el div tarjet__container */
+.tarjet__container{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+}
+
+
+/* estilizando el div coffee__background */
+.tarjet__background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: var(--negro);
+    transition: color, 200ms ease;
+}
+
+/* estilizando el hover del div coffee__background */
+.tarjet__background:hover{
+    border: 5px solid var(--marronClaro);
+}
+
+.tarjet__background img{
+    width: 100px;
+    transition: transform, 200ms ease;
+}
+
+.tarjet__background img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}   
+
+
+.tarjet_background .coffe_img{
+    width: 140px;
+}
+
+/* estilizando el div coffe__title */
+.coffe__title{
+    text-align: center;
+    width: 220px;
+    color: #222;
+    filter: drop-shadow(1px 2px 5px rgba(240,240,240,1));
+}
+
+.tarjet__background img{
+object-fit: cover;
+}
+
+
+/* SHAKES */
+
+/* estilizando las imgs */
+
+
+
+
+
+#productos{
+    padding: 2rem 0;
+    background-image: url('Imagenes/productos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+background-attachment: fixed;
+}
