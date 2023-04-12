@@ -18,7 +18,7 @@ function blurElementos(){
     const heroText = document.querySelector('.hero-text');
     const heroImg=document.querySelector('.hero-img');
     aparecerElementos(heroText,1000)
-    aparecerElementos(heroImg,1500)
+   
 
 }
 

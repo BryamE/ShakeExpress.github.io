@@ -129,12 +129,12 @@ text-align: center;
 
 }
 .hero-img{
-    opacity: 0;
+
 width: 250px;
 height: 250px;
 margin: 0 auto;
 filter: drop-shadow(1px 1px 3px var(--beige)) brightness(.9);
-animation: rotar 20s linear infinite;
+animation: rotar 20s linear infinite, aparecer 3s linear;
 }
 
 .hero-img img{
@@ -266,8 +266,73 @@ video{
     width: 100% !important;
 }
 
+/*NOSOTROS*/
+
+.nosotros{
+    padding: 3rem 1rem;
+}
+
+.container-nosotros{
+    max-width: 1570px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
 
 
+
+.nosotros-text h2{
+    text-align: center;
+    color: var(--negro);
+    font-size: 5rem;
+    border-left: 4px solid var(--marronClaro);
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+.nosotros-text p{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.nosotros-img{
+   filter: drop-shadow(5px 5px 5px rgba(186,186,186,1));
+   width: auto;
+}
+.nosotros-img img{
+    border-radius: 70px;
+}
+
+@media(min-width:690px){
+    
+    .nosotros-img{
+        filter: drop-shadow(5px 5px 5px rgba(186,186,186,1));
+        width: 700px;
+     }
+}
+
+@media(min-width:1590px){
+    .container-nosotros{
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        column-gap: 3rem;
+    }
+    .nosotros-img{
+        width: auto;
+     }
+
+     .nosotros-text h2{
+        text-align: left;
+   
+    }
+    .nosotros-text p{
+        text-align: left;
+
+    }
+
+}
 
 /*FOOTER*/
 
@@ -302,4 +367,4 @@ video{
 }
 
 
-
+/*JOAQUIN*/
