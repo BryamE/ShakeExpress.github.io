@@ -107,6 +107,7 @@ text-align: center;
 }
 
 .hero-text{
+    opacity: 0;
     color: white;
     width: 100%;
     text-align: center;
@@ -128,6 +129,7 @@ text-align: center;
 
 }
 .hero-img{
+    opacity: 0;
 width: 250px;
 height: 250px;
 margin: 0 auto;
@@ -216,7 +218,10 @@ video{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    z-index: 100000;
 }
 .container-spin{
     border: 3px solid var(--marron);
@@ -261,6 +266,32 @@ video{
     width: 100% !important;
 }
 
+
+
+
+/*FOOTER*/
+
+.footer{
+    padding: 1rem 0;
+    background-color: var(--negro);
+    color: white;
+    text-align: center;
+}
+
+.aparecer{
+    animation: aparecer 1s linear;
+    opacity: 1;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes rotar {
     0%{
     transform: rotate(0deg);
@@ -269,3 +300,6 @@ video{
         transform: rotate(360deg);
     }
 }
+
+
+

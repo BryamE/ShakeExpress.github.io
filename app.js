@@ -10,15 +10,40 @@ function iniciarApp(){
     desplegarNav()
     quitarSpin();
 
+    blurElementos()
+
 }
+
+function blurElementos(){
+    const heroText = document.querySelector('.hero-text');
+    const heroImg=document.querySelector('.hero-img');
+    aparecerElementos(heroText,1000)
+    aparecerElementos(heroImg,1500)
+
+}
+
+
+function aparecerElementos(container,time){
+
+
+    setTimeout(()=>{
+        container.classList.add('aparecer')
+    },time)
+    return
+
+}
+
+
+
 
 
 function quitarSpin(){
     const spin= document.querySelector('.spin')
-    body.style.overflowY="scroll"
+
     setTimeout(()=>{
         spin.classList.add('remover')
-    },2000)
+        body.style.overflowY="scroll"
+    },1000)
 }
 
 function desplegarNav(){
