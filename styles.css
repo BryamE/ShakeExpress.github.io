@@ -159,8 +159,8 @@ animation: rotar 25s linear infinite, aparecer 3s linear;
 @media(min-width:350px){
     .hero-img{
 
-        width: 250px;
-        height: 250px;
+        width: 160px;
+        height: 160px;
       
         }
 
@@ -177,8 +177,8 @@ animation: rotar 25s linear infinite, aparecer 3s linear;
         margin: 0;
     }
     .hero-img{
-        width: 350px;
-        height: 350px;
+        width: 250px;
+        height: 250px;
     }
 }
 
