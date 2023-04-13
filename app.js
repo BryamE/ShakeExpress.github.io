@@ -10,8 +10,45 @@ function iniciarApp(){
     desplegarNav();
     quitarSpin();
     blurElementos();
-    allLinks()
+    allLinks();
 
+ 
+    controlarForm();
+
+}
+
+function controlarForm(){
+
+    const formSubmit = document.querySelector('.form__submit');
+    if(formSubmit){
+        formSubmit.addEventListener('click',(e)=>{
+
+            e.preventDefault();
+            const alerta = document.querySelector('.alerta')
+            const form = document.querySelector('.form')
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const pass = document.querySelector('#password').value;
+            if(name=== '' || email==='' || pass==''){
+                
+                alerta.textContent= 'DEBES RELLENAR TODOS LOS CAMPOS'
+                alerta.classList.add('error')
+                setTimeout(()=>{
+                    alerta.textContent=''
+                    alerta.classList.remove('error')
+                },3000)
+                return;
+            }
+            alerta.classList.add('exito')
+            alerta.textContent='EXITOSO'
+    
+            location.href ="index.html";
+    
+    
+        })
+    }
+   
+   
 }
 
 function allLinks(){
@@ -42,11 +79,14 @@ function blurElementos(){
 
 function aparecerElementos(container,time){
 
+    if(container){
+        setTimeout(()=>{
+            container.classList.add('aparecer')
+        },time)
+        return
+    }
 
-    setTimeout(()=>{
-        container.classList.add('aparecer')
-    },time)
-    return
+  
 
 }
 
@@ -56,20 +96,25 @@ function aparecerElementos(container,time){
 
 function quitarSpin(){
     const spin= document.querySelector('.spin')
+    if(spin){
+        setTimeout(()=>{
+            spin.classList.add('remover')
+            body.style.overflowY="scroll"
+        },2000)
+    }
 
-    setTimeout(()=>{
-        spin.classList.add('remover')
-        body.style.overflowY="scroll"
-    },2000)
 }
 
 function desplegarNav(){
     const menu = document.querySelector('.menu');
-    const containerHeader = document.querySelector('.container-header');
-    const nav = document.querySelector('.navegacion')
-    menu.addEventListener('click',()=>{
-        nav.classList.toggle('visible')
-        containerHeader.classList.toggle('width-100')
-      
-    })
+    if(menu){
+        const containerHeader = document.querySelector('.container-header');
+        const nav = document.querySelector('.navegacion')
+        menu.addEventListener('click',()=>{
+            nav.classList.toggle('visible')
+            containerHeader.classList.toggle('width-100')
+          
+        })
+    }
+  
 }
