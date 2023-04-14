@@ -1,27 +1,27 @@
 const body = document.querySelector('body')
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
     iniciarApp();
 
 
 })
 
 
-function iniciarApp(){
+function iniciarApp() {
     desplegarNav();
     quitarSpin();
     blurElementos();
     allLinks();
 
- 
+
     controlarForm();
 
 }
 
-function controlarForm(){
+function controlarForm() {
 
     const formSubmit = document.querySelector('.form__submit');
-    if(formSubmit){
-        formSubmit.addEventListener('click',(e)=>{
+    if (formSubmit) {
+        formSubmit.addEventListener('click', (e) => {
 
             e.preventDefault();
             const alerta = document.querySelector('.alerta')
@@ -29,64 +29,71 @@ function controlarForm(){
             const name = document.querySelector('#name').value;
             const email = document.querySelector('#email').value;
             const pass = document.querySelector('#password').value;
-            if(name=== '' || email==='' || pass==''){
-                
-                alerta.textContent= 'DEBES RELLENAR TODOS LOS CAMPOS'
+            if (name === '' || email === '' || pass == '') {
+
+                alerta.textContent = 'DEBES RELLENAR TODOS LOS CAMPOS'
                 alerta.classList.add('error')
-                setTimeout(()=>{
-                    alerta.textContent=''
+                setTimeout(() => {
+                    alerta.textContent = ''
                     alerta.classList.remove('error')
-                },3000)
+                }, 3000)
                 return;
             }
             alerta.classList.add('exito')
-            alerta.textContent='EXITOSO'
-    
-            location.href ="index.html";
-    
-    
+            alerta.textContent = 'EXITOSO'
+
+            location.href = "index.html";
+
+
         })
     }
-   
-   
+
+
 }
 
-function allLinks(){
+function allLinks() {
     const links = document.querySelectorAll('.smooth');
-    
-    links.forEach((link)=>{
-        navegacionSmooth(link)
-    })
-  
+
+    if (links != []) {
+        links.forEach((link) => {
+            navegacionSmooth(link)
+        })
+    }
+
+
 }
-function navegacionSmooth(link){
-    link.addEventListener('click',(e)=>{
+function navegacionSmooth(link) {
+
+    link.addEventListener('click', (e) => {
         e.preventDefault();
- 
-        const seccion = document.querySelector(e.target.attributes.href.value);
-        seccion.scrollIntoView({behavior: 'smooth'});
+
+        const seccion = document.querySelector(e.target.attributes.href.value ? e.target.attributes.href.value : null);
+        if (seccion !== null) {
+            seccion.scrollIntoView({ behavior: 'smooth' });
+        }
+
     })
 }
 
-function blurElementos(){
+function blurElementos() {
     const heroText = document.querySelector('.hero-text');
-    const heroImg=document.querySelector('.hero-img');
-    aparecerElementos(heroText,2300)
-   
+    const heroImg = document.querySelector('.hero-img');
+    aparecerElementos(heroText, 2300)
+
 
 }
 
 
-function aparecerElementos(container,time){
+function aparecerElementos(container, time) {
 
-    if(container){
-        setTimeout(()=>{
+    if (container) {
+        setTimeout(() => {
             container.classList.add('aparecer')
-        },time)
+        }, time)
         return
     }
 
-  
+
 
 }
 
@@ -94,27 +101,27 @@ function aparecerElementos(container,time){
 
 
 
-function quitarSpin(){
-    const spin= document.querySelector('.spin')
-    if(spin){
-        setTimeout(()=>{
+function quitarSpin() {
+    const spin = document.querySelector('.spin')
+    if (spin) {
+        setTimeout(() => {
             spin.classList.add('remover')
-            body.style.overflowY="scroll"
-        },2000)
+            body.style.overflowY = "scroll"
+        }, 2000)
     }
 
 }
 
-function desplegarNav(){
+function desplegarNav() {
     const menu = document.querySelector('.menu');
-    if(menu){
+    if (menu) {
         const containerHeader = document.querySelector('.container-header');
         const nav = document.querySelector('.navegacion')
-        menu.addEventListener('click',()=>{
+        menu.addEventListener('click', () => {
             nav.classList.toggle('visible')
             containerHeader.classList.toggle('width-100')
-          
+
         })
     }
-  
+
 }
